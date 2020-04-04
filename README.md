@@ -12,7 +12,7 @@ The Badges below represent achievement in a range of categories.
 
 ### GitHub
 
-![1 Month Streak](images/1-month-streak.png)
+<div style="display:grid; grid-template-columns: 1fr 1fr">
 
 ![5 commits](images/5-commits.png)
 
@@ -26,11 +26,15 @@ The Badges below represent achievement in a range of categories.
 
 ![2 week streak](images/2-week-streak.png)
 
+![1 Month Streak](images/1-month-streak.png)
+
 ![1st Pull Request](images/1ST-pull-request.png)
 
 ![4th Pull Request](images/4th-pull-request.png)
 
 ![10th Pull Request](images/10th-pull-request.png)
+
+</div>
 
 ### React 
 
