@@ -12,13 +12,10 @@ The Badges below represent achievement in a range of categories.
 
 ### GitHub
 
-<style>
-  .badge {
-    width: 200px;
-    height: auto;
-  }
-</style>
-<img class="badge" style="width: 200px;height: auto;" src="images/5-commits.png">
+
+<figure style="width: 200px">
+  <img src="images/5-commits.png">
+</figure>
 
 **Github** - 5 commits in a day
 
