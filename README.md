@@ -12,13 +12,13 @@ The Badges below represent achievement in a range of categories.
 
 ### GitHub
 
-![1 Month Streak](imagse/1-month-streak.png)
+![1 Month Streak](images/1-month-streak.png)
 
-![5 commits](imagse/5-commits.png)
+![5 commits](images/5-commits.png)
 
-![10 commits](imagse/10-commits.png)
+![10 commits](images/10-commits.png)
 
-![100 commits](imagse/100-commits.png)
+![100 commits](images/100-commits.png)
 
 ![5 day streak](images/5-day-streak.png)
 
