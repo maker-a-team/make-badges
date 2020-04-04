@@ -12,33 +12,25 @@ The Badges below represent achievement in a range of categories.
 
 ### GitHub
 
+![1 Month Streak](imagse/1-month-streak.png)
 
-<figure style="width: 200px">
-  <img src="images/5-commits.png">
-</figure>
-
-**Github** - 5 commits in a day
+![5 commits](imagse/5-commits.png)
 
 ![10 commits](imagse/10-commits.png)
 
-**GitHub** - 10 commits in a day
+![100 commits](imagse/100-commits.png)
 
 ![5 day streak](images/5-day-streak.png)
 
-**GitHub** - 5 Day Streak
-
 ![7 day streak](images/7-day-streak.png)
 
-**GitHub** - 7 Day Streak
+![2 week streak](images/2-week-streak.png)
 
-![two week streak](images/two-week-streak.png)
+![1st Pull Request](images/1ST-pull-request.png)
 
-**GitHub** - Two Week Streak
+![4th Pull Request](images/4th-pull-request.png)
 
-![Pull Request](images/pull-request.png)
-
-**GitHub** - First Pull Request
-
+![10th Pull Request](images/10th-pull-request.png)
 
 
 <!-- Code Badges 
