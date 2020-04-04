@@ -18,7 +18,7 @@ The Badges below represent achievement in a range of categories.
     height: auto;
   }
 </style>
-<img class="badge" src="images/5-commits.png">
+<img style="width: 200px;height: auto;" src="images/5-commits.png">
 
 **Github** - 5 commits in a day
 
