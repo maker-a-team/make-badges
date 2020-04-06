@@ -16,43 +16,50 @@ The Badges below represent achievement in a range of categories.
 
 #### Commits 
 
-[100 Commits](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg) 
+**[100 Commits](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)** - Earn this badge by making 100 commits to github.
 
 [![100 commits](images/100-commits.png)](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)
 
-![100 commits](images/100-commits.png {width="200"})
-
 #### Daily Commits
 
-[5 Commits in a Day](https://badgr.com/public/badges/D5KhEgQ8TFaPNGr7erx6pA)
+**[5 Commits in a Day](https://badgr.com/public/badges/D5KhEgQ8TFaPNGr7erx6pA)** - Earn this badge by making 5 commits in a day. 
+
 [![5 commits](images/5-commits.png)](https://badgr.com/public/badges/D5KhEgQ8TFaPNGr7erx6pA)
 
-10 Commits in a Day
-![10 commits](images/10-commits.png)
+**[10 Commits in a Day](https://badgr.com/public/badges/eutqTD-oQhyk1dDnQIfGcw)** - Earn this badge by making 10 commits to GitHub in one day. 
+
+[![10 commits](images/10-commits.png)](https://badgr.com/public/badges/eutqTD-oQhyk1dDnQIfGcw)
 
 #### Streak
 
-5 Day Streak - At least one commit on each of 5 consecutive days 
-![5 day streak](images/5-day-streak.png)
+**[5 Day GitHub Streak](https://badgr.com/public/badges/eCNZRftqRNSaLNyR2KY6Nw)** - Earn this badge by making at least one commit to GitHub on each of 5 consecutive days.  
 
-7 Day Streak - At least one commit on each of 7 consecutive days
-![7 day streak](images/7-day-streak.png)
+[![5 day streak](images/5-day-streak.png)](https://badgr.com/public/badges/eCNZRftqRNSaLNyR2KY6Nw)
 
-2 Week Streak - At least one commit on each of 14 consecutive days
-![2 week streak](images/2-week-streak.png)
+**[7 Day GitHub Streak](https://badgr.com/public/badges/Ku4-sQBpQ3qCFwaCBOj_AA)** - Earn this badge by making least one commit on each of 7 consecutive days
 
-1 Month Streak - At least one commit on each of 30+ consecutive days 
-![1 Month Streak](images/1-month-streak.png)
+[![7 day GitHub streak](images/7-day-streak.png)](https://badgr.com/public/badges/Ku4-sQBpQ3qCFwaCBOj_AA)
+
+**[2 Week Streak - At least one commit on each of 14 consecutive days](https://badgr.com/public/badges/7Bl4_tpKQ7Kt1XSjUGmXxQ)** - Earn this badge by making at least one GitHub commit on each of 14 cosecutive days.
+
+[![2 week streak](images/2-week-streak.png)](https://badgr.com/public/badges/7Bl4_tpKQ7Kt1XSjUGmXxQ)
+
+**[1 Month Streak - At least one commit on each of 30+ consecutive days](https://badgr.com/public/badges/1raVvbKfQNa3kkjYg3H4Vw)** - Earn -this badge by making a commit to GitHub on each of 30+ consecutive days. 
+
+[![1 Month Streak](images/1-month-streak.png)](https://badgr.com/public/badges/1raVvbKfQNa3kkjYg3H4Vw)
 
 #### Pull Requests
 
-[1st Pull Request](https://badgr.com/public/badges/Rn9njmZaRnK-SmeYc_eeAA)
+**[1st Pull Request](https://badgr.com/public/badges/Rn9njmZaRnK-SmeYc_eeAA)** - Earn this badge by making your first pull request on GitHub. 
+
 [![1st Pull Request](images/1ST-pull-request.png)](https://badgr.com/public/badges/Rn9njmZaRnK-SmeYc_eeAA)
 
-[4th Pull Request](https://badgr.com/public/badges/QOuOITl3RV2FIcSNunn89A)
+**[4th Pull Request](https://badgr.com/public/badges/QOuOITl3RV2FIcSNunn89A)** - Earn this badge by making your fourth pull request on GitHub.
+
 [![4th Pull Request](images/4th-pull-request.png)](https://badgr.com/public/badges/QOuOITl3RV2FIcSNunn89A)
 
-[10th Pull Request](https://badgr.com/public/badges/TT-LxRK0TOaixA1MePAeTg)
+**[10th Pull Request](https://badgr.com/public/badges/TT-LxRK0TOaixA1MePAeTg)** - Earn this badge by making your tenth pull request on GitHub.
+
 [![10th Pull Request](images/10th-pull-request.png)](https://badgr.com/public/badges/TT-LxRK0TOaixA1MePAeTg)
 
 
