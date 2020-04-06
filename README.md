@@ -12,30 +12,46 @@ The Badges below represent achievement in a range of categories.
 
 ### GitHub
 
-<div style="display:grid; grid-template-columns: 1fr 1fr">
+#### Commits 
 
-![5 commits](images/5-commits.png)
+[100 Commits](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg) 
+[![100 commits](images/100-commits.png)](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)
 
+#### Daily Commits
+
+[5 Commits in a Day](https://badgr.com/public/badges/D5KhEgQ8TFaPNGr7erx6pA)
+[![5 commits](images/5-commits.png)](https://badgr.com/public/badges/D5KhEgQ8TFaPNGr7erx6pA)
+
+10 Commits in a Day
 ![10 commits](images/10-commits.png)
 
-![100 commits](images/100-commits.png)
+#### Streak
 
+5 Day Streak - At least one commit on each of 5 consecutive days 
 ![5 day streak](images/5-day-streak.png)
 
+7 Day Streak - At least one commit on each of 7 consecutive days
 ![7 day streak](images/7-day-streak.png)
 
+2 Week Streak - At least one commit on each of 14 consecutive days
 ![2 week streak](images/2-week-streak.png)
 
+1 Month Streak - At least one commit on each of 30+ consecutive days 
 ![1 Month Streak](images/1-month-streak.png)
 
-![1st Pull Request](images/1ST-pull-request.png)
+#### Pull Requests
 
-![4th Pull Request](images/4th-pull-request.png)
+[1st Pull Request](https://badgr.com/public/badges/Rn9njmZaRnK-SmeYc_eeAA)
+[![1st Pull Request](images/1ST-pull-request.png)](https://badgr.com/public/badges/Rn9njmZaRnK-SmeYc_eeAA)
 
-![10th Pull Request](images/10th-pull-request.png)
+[4th Pull Request](https://badgr.com/public/badges/QOuOITl3RV2FIcSNunn89A)
+[![4th Pull Request](images/4th-pull-request.png)](https://badgr.com/public/badges/QOuOITl3RV2FIcSNunn89A)
 
-</div>
+[10th Pull Request](https://badgr.com/public/badges/TT-LxRK0TOaixA1MePAeTg)
+[![10th Pull Request](images/10th-pull-request.png)](https://badgr.com/public/badges/TT-LxRK0TOaixA1MePAeTg)
 
+
+<!-- 
 ### React 
 
 ![react-tutorial-0](images/react-tutorial-0.png)
@@ -63,6 +79,8 @@ The Badges below represent achievement in a range of categories.
 ![react-redux-1](images/react-redux-1.png)
 
 ![react-redux-2](images/react-redux-2.png)
+
+-->
 
 <!-- Code Badges 
 
