@@ -6,6 +6,8 @@ Each badge is an image combined with meta data that details the issuer, the ache
 
 Badges can be displayed anywhere you can put an image: in email, on your [LinkedIn profile](https://openbadges.tumblr.com/post/55809369771/how-to-display-your-open-badges-on-your-linkedin),  or on social media. 
 
+Check out the 
+
 ## Badges you can earn!
 
 The Badges below represent achievement in a range of categories. 
@@ -15,7 +17,7 @@ The Badges below represent achievement in a range of categories.
 #### Commits 
 
 [100 Commits](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg) 
-[![100 commits](images/100-commits.png)](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)
+[![100 commits](images/100-commits.png | width=100)](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)
 
 #### Daily Commits
 
