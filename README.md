@@ -17,7 +17,9 @@ The Badges below represent achievement in a range of categories.
 #### Commits 
 
 [100 Commits](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg) 
+
 [![100 commits](images/100-commits.png {width="200"})](https://badgr.com/public/badges/8nY3MIUVRTCER-ObLZQcAg)
+
 ![100 commits](images/100-commits.png {width="200"})
 
 #### Daily Commits
