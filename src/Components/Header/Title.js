@@ -16,7 +16,7 @@ function Title() {
             className="nav-link"
             activeClassName="nav-link-active"
             exact
-            to="/"
+            to="/badgelist"
           >
             List
           </NavLink>
@@ -27,6 +27,24 @@ function Title() {
             to="/about"
           >
             About
+          </NavLink>
+
+          <NavLink
+            className="nav-link"
+            activeClassName="nav-link-active"
+            exact
+            to="/account"
+          >
+            My Account
+          </NavLink>
+
+          <NavLink
+            className="nav-link"
+            activeClassName="nav-link-active"
+            exact
+            to="/signIn"
+          >
+            Sign in
           </NavLink>
         </div>
       </header>

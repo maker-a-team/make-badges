@@ -47,7 +47,7 @@ const AccountPage = () => (
 class LoginManagementBase extends Component {
   constructor(props) {
     super(props);
-
+    console.log(props.authUser)
     this.state = {
       activeSignInMethods: [],
       error: null,

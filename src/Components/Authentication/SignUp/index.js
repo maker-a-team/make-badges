@@ -3,8 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../../Firebase';
-// import * as ROUTES from '../../constants/routes';
-// import * as ROLES from '../../constants/roles';
 
 const SignUpPage = () => (
   <div>
@@ -39,32 +37,38 @@ class SignUpFormBase extends Component {
     this.state = { ...INITIAL_STATE };
   }
 
-  onSubmit = event => {
+  onSubmit = (event) => {
     const { username, email, passwordOne, isAdmin } = this.state;
-    // const roles = {};
+    const roles = {};
 
-    // if (isAdmin) {
-    //   roles[ROLES.ADMIN] = ROLES.ADMIN;
-    // }
+    if (isAdmin) {
+      roles["Priority"] = "ADMIN";
+    }
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
-      .then(authUser => {
+      .then((authUser) => {
+        authUser.user.updateProfile({
+          displayName: username,
+          photoURL:
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fctorthopaedic.com%2Fhome%2Fprofile-silhouette%2F&psig=AOvVaw030D0jVKxOxcwnfD2cJLwD&ust=1601667943801000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCK1ZiUlOwCFQAAAAAdAAAAABAD",
+        });
         // Create a user in your Firebase realtime database
         return this.props.firebase.user(authUser.user.uid).set({
           username,
           email,
-          // roles,
+          roles,
         });
       })
       .then(() => {
+
         return this.props.firebase.doSendEmailVerification();
       })
       .then(() => {
         this.setState({ ...INITIAL_STATE });
         this.props.history.push("/");
       })
-      .catch(error => {
+      .catch((error) => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
@@ -75,11 +79,37 @@ class SignUpFormBase extends Component {
     event.preventDefault();
   };
 
-  onChange = event => {
+  validate = (email) => {
+    // const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+
+    //other regexes that will cause more validation issues
+
+    // const expression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // const expression = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+    //const expression = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    //simplest ever, but with many false positives
+    // const expression = /\S+@\S+/;
+    const makeschoolstaff = /\S+@makeschool.com/;
+    const makeschool = /\S+@students.makeschool.com/;
+    const dominican = /\S+@students.dominican.edu/;
+
+    if (makeschoolstaff.test(String(email).toLowerCase())) {
+      this.isAdmin = true;
+      return true
+    }
+
+    return (
+      makeschool.test(String(email).toLowerCase()) ||
+      dominican.test(String(email).toLowerCase())
+    );
+  };
+
+  onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  onChangeCheckbox = event => {
+  onChangeCheckbox = (event) => {
     this.setState({ [event.target.name]: event.target.checked });
   };
 
@@ -89,7 +119,8 @@ class SignUpFormBase extends Component {
       email,
       passwordOne,
       passwordTwo,
-      isAdmin,
+      // isAdmin,
+      validEmail = this.validate(email),
       error,
     } = this.state;
 
@@ -97,6 +128,7 @@ class SignUpFormBase extends Component {
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
       email === '' ||
+      !validEmail ||
       username === '';
 
     return (
@@ -145,6 +177,9 @@ class SignUpFormBase extends Component {
         <button disabled={isInvalid} type="submit">
           Sign Up
         </button>
+        <br />
+        <br />
+        <br />
 
         {error && <p>{error.message}</p>}
       </form>
