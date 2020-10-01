@@ -11,7 +11,7 @@ function BadgeDetails(props) {
   return (
     <div>
       <div>
-        <img src={`${process.env.PUBLIC_URL}images/${image}`} />
+        <img src={`${process.env.PUBLIC_URL}images/${image}`} alt="Badge"/>
       </div>
 
       <div>

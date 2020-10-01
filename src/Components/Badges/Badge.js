@@ -5,7 +5,7 @@ import "./Badge.css"
 
 
 function Badge(props) {
-  const { id, name, category, image, description } = props;
+  const { id, name, image, description } = props;
   return (
     <div className="Badge">
       <Link to={`/details/${id}`}>
