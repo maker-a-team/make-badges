@@ -3,12 +3,12 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Title from "./Header/Title";
-import Footer from "./Footer/Footer";
+import Title from "./Components/Header/Title";
+import Footer from "./Components/Footer/Footer";
 
-import BadgeList from "./Badges/BadgeList";
-import About from "./About/About";
-import BadgeDetails from "./Badges/BadgeDetails";
+import BadgeList from "./Components/Badges/BadgeList";
+import About from "./Components/About/About";
+import BadgeDetails from "./Components/Badges/BadgeDetails";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/" component={BadgeList} />
         <Route exact path="/about" component={About} />
         <Route path="/details/:id" component={BadgeDetails} />
+        <img src={logo} className="App-logo" alt="logo" />
         <Footer />
       </div>
     </Router>

@@ -1,6 +1,6 @@
 {
-  "name": "make-badges-backend",
-  "version": "0.1.0",
+  "name": "make-badges",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
