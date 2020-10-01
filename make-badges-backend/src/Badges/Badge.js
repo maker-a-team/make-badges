@@ -1,13 +1,14 @@
 // src/Badge.js
 
 import React from "react";
+import "./Badge.css"
 
 function Badge(props) {
   const { name, category, image, description } = props;
   return (
-    <div>
+    <div className="Badge">
       <img
-        src={`${process.env.PUBLIC_URL}images/${category}/${image}`}
+        src={`${process.env.PUBLIC_URL}images/${image}`}
         width="300"
         height="300"
         alt="Badge Icon"
