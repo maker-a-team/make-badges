@@ -1,4 +1,4 @@
-// src/Title.js
+// src/Footer/Footer.js
 import React from "react";
 import "./Footer.css";
 

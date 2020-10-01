@@ -1,4 +1,4 @@
-// src/BadgeList.js
+// src/Badges/BadgeList.js
 import React from "react";
 import Badge from "./Badge";
 import "./BadgeList.css"
@@ -6,11 +6,12 @@ import data from "../badge-data.json";
 
 
 function BadgeList() {
-  const badges = data.map((id, name, category, description, imageUrl) => {
+  const badges = data.map(( { name, category, description, image }, i ) => {
 
     return (
       <Badge
-        key={id}
+        id={i}
+        key={name}
         name={name}
         category={category}
         image={image}
