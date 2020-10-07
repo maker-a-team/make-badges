@@ -13,6 +13,16 @@ code {
 }
 
  */
+
+:root {
+  --color-light-blue: #4BB1E4;
+  --color-medium-blue: #087CB8;
+  --color-dark-blue: #0D4062;
+  --color-faint-grey: #f5f6f8;
+  --color-light-grey: #DFDFDF;
+  --color-grey: #87898C;
+}
+
 body {
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -20,45 +30,45 @@ body {
     background-color: rgb(240, 253, 255);
   }
 
-  .container {
-    width: calc(100% - 4rem);
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+.container {
+  width: calc(100% - 4rem);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-  .badge-gallery {
-    display: grid;
-    width: 600px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: auto;
-  }
+.badge-gallery {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+}
 
-  .badge-gallery > img {
-    width: 100%;
-  }
+.badge-gallery > img {
+  width: 100%;
+}
 
-  .badge-gallery.javascript > img {
-    filter: hue-rotate(30deg);
-  }
+.badge-gallery.javascript > img {
+  filter: hue-rotate(30deg);
+}
 
-  .badge-gallery.react > img {
-    filter: hue-rotate(60deg);
-  }
+.badge-gallery.react > img {
+  filter: hue-rotate(60deg);
+}
 
-  .badge-gallery.cs > img {
-    filter: hue-rotate(90deg);
-  }
+.badge-gallery.cs > img {
+  filter: hue-rotate(90deg);
+}
 
-  .badge-gallery.mobile > img {
-    filter: hue-rotate(120deg);
-  }
+.badge-gallery.mobile > img {
+  filter: hue-rotate(120deg);
+}
 
-  .badge-gallery.job > img {
-    filter: hue-rotate(150deg);
-  }
+.badge-gallery.job > img {
+  filter: hue-rotate(150deg);
+}
 
-  .badge-gallery.sa > img {
-    filter: hue-rotate(180deg);
-  }
+.badge-gallery.sa > img {
+  filter: hue-rotate(180deg);
+}
