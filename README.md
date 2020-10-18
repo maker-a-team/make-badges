@@ -12,6 +12,10 @@ Badges can be displayed anywhere you can put an image: in email, on your [Linked
 
 ### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) & by following [This Tutorial](https://www.makeschool.com/academy/track/react-fundamentals-vm0).
 
+## Contributing
+
+For more details on our code of conduct, and the process for submitting pull requests to us, Please read our [CONTRIBUTING.md](CONTRIBUTING.md) .
+
 ## Available Scripts
 
 In the project directory, you can run:

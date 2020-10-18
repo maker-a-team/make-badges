@@ -41,6 +41,7 @@ body {
   flex-direction: column;
 }
 
+/* Needs to be applied to BadgeList.md &/or the badgelist in components > badges > badgelist */
 .badge-gallery {
   display: grid;
   width: 600px;
