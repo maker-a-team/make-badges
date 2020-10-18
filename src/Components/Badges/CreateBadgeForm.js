@@ -68,7 +68,7 @@ class CreateBadgeForm extends Component {
       image: this.state.image,
       link: this.state.link,
       name: this.state.name,
-      ownerID: authUser,
+      ownerID: authUser.uid,
     });
 
     this.setState({

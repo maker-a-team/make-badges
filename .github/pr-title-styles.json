@@ -1,0 +1,17 @@
+{
+    "LABEL": {
+        "name": "title needs formatting",
+        "color": "EEEEEE"
+    },
+    "CHECKS": {
+        "prefixes": [
+            "[Add]: ",
+            "[Update]: ",
+            "[Delete]: ",
+            "[Fix]: ",
+            "[Merge]: ",
+            "[Test]: "
+        ],
+        "regexp": "docs\\(v[0-9]\\): "
+    }
+}
