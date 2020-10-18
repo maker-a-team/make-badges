@@ -16,7 +16,7 @@ import {
 
 import About from "./Components/About";
 import AccountPage from "./Components/Account";
-// import BadgesPage from "./Components/Badges";
+import BadgesPage from "./Components/Badges";
 
 import { withAuthentication } from "../src/Components/Session";
 
@@ -35,7 +35,7 @@ function App() {
         <Route exact path={r.PASSWORD_RESSET} component={PasswordChangeForm} />
 
         <Route exact path={r.ABOUT} component={About} />
-        {/* <Route exact path={r.BADGES} component={BadgesPage} /> */}
+        <Route path={r.BADGES} component={BadgesPage} />
         <Footer />
       </div>
     </Router>

@@ -8,4 +8,4 @@ export const PASSWORD_FORGET = '/pw-forget';
 export const PASSWORD_RESSET = "/pw-reset";
 
 export const BADGES = '/badges';
-export const BADGE_DETAILS = '/badges/:badgeID'
+export const BADGE_DETAILS = '/badges/:id'
