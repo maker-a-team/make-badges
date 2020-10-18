@@ -1,0 +1,27 @@
+/*  src/Header/Header.css  */
+.Header {
+  align-items: center;
+  display: flex;
+  height: 66px;
+  justify-content: flex-start;
+  padding: 0 30px;
+  background-color: var(--color-dark-grey);
+}
+.nav-logo {
+  justify-content: left;
+}
+.nav-item {
+  justify-content: right;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: rgba(255, 255, 255, 0.835);
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-link-active {
+  color: #fff;
+  border-bottom: 2px solid;
+}

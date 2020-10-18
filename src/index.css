@@ -15,12 +15,15 @@ code {
  */
 
 :root {
-  --color-light-blue: #4BB1E4;
+  --color-light-blue: #4BB1E4; /* *Limited use as an accent color */
   --color-medium-blue: #087CB8;
   --color-dark-blue: #0D4062;
-  --color-faint-grey: #f5f6f8;
-  --color-light-grey: #DFDFDF;
+  --color-faint-grey: #f5f6f8; /* *Only used for backgrounds */
+  --color-light-grey: #DFDFDF; /* *Often used for borders */
   --color-grey: #87898C;
+  --color-medium-grey: #4A4A4A;
+  --color-dark-grey: #303030;
+  --color-black: #000000; /* *Very limited use as an alternative font color. Never use as a background color, instead opt for Dark Grey or Medium Grey */
 }
 
 body {

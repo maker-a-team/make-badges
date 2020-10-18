@@ -3,12 +3,14 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import Title from "./Components/Header/Title";
-import Footer from "./Components/Footer/Footer";
+import Title from "./Components/Header";
+import Footer from "./Components/Footer";
 
-import BadgeList from "./Components/Badges/BadgeList";
-import About from "./Components/About/About";
-import BadgeDetails from "./Components/Badges/BadgeDetails";
+// import BadgeList from "./Components/Badge-/BadgeList";
+// import BadgeList from "./Components/Badges/BadgeList";
+// import BadgeItem from "./Components/Badges/BadgeItem";
+import About from "./Components/About";
+// import BadgeDetails from "./Components/Badges/BadgeDetails";
 
 import {
   SignUpPage,
@@ -35,9 +37,10 @@ function App() {
         <Route exact path="/account" component={AccountPage} />
         <Route exact path="/signOut" component={SignOutButton} />
 
-        <Route exact path="/badgelist" component={BadgeList} />
         <Route exact path="/about" component={About} />
-        <Route path="/details/:id" component={BadgeDetails} />
+        {/* <Route exact path="/badgelist" component={BadgeList} /> */}
+        {/* <Route exact path="/badgelist" component={BadgeList} /> */}
+        {/* <Route path="/details/:category/:id" component={BadgeItem} /> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Footer />
       </div>

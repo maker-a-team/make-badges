@@ -111,11 +111,11 @@ class Firebase {
 
   users = () => this.db.ref('users');
 
-  // *** Report API ***
+  // *** Badge API ***
 
-  badge = (uid) => this.db.ref(`badges/${uid}`);
+  badge = (uid) => this.db.ref(`unsorted-badges/${uid}`);
 
-  badges = () => this.db.ref('badges');
+  badges = () => this.db.ref('unsorted-badges');
 
 }
 
