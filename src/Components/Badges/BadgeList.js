@@ -20,15 +20,19 @@ class BadgeList extends Component {
     this.props.firebase.badges().on("value", (snapshot) => {
       const badgesObject = snapshot.val();
 
-      const badgesList = Object.keys(badgesObject).map((key) => ({
-        ...badgesObject[key],
-        uid: key,
-      }));
+      if (badgesObject) {
+        const badgesList = Object.keys(badgesObject).map((key) => ({
+          ...badgesObject[key],
+          uid: key,
+        }));
 
-      this.setState({
-        badges: badgesList,
-        loading: false,
-      });
+        this.setState({
+          badges: badgesList,
+          loading: false,
+        });
+      } else {
+        this.setState({ badges: null, loading: false });
+      }
     });
   }
 
@@ -65,17 +69,21 @@ class BadgeList extends Component {
 
             {loading && <div>Loading ...</div>}
 
-            <ul className="BadgeList">
-              {badges.map((badge) => (
-                <BadgeItem
-                  authUser={authUser}
-                  key={badge.uid}
-                  badge={badge}
-                  onEditBadge={this.onEditBadge}
-                  onRemoveBadge={this.onRemoveBadge}
-                />
-              ))}
-            </ul>
+            {badges && (
+              <ul className="BadgeList">
+                {badges.map((badge) => (
+                  <BadgeItem
+                    authUser={authUser}
+                    key={badge.uid}
+                    badge={badge}
+                    onEditBadge={this.onEditBadge}
+                    onRemoveBadge={this.onRemoveBadge}
+                  />
+                ))}
+              </ul>
+            )}
+
+            {!badges && <div>There are no badges ...</div>}
           </div>
         )}
       </AuthUserContext.Consumer>
