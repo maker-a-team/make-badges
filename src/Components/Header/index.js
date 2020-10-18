@@ -3,6 +3,7 @@ import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../logo-white.svg";
+import * as r from '../../constants/routes';
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
           className="nav-link"
           activeClassName="nav-link-active"
           exact
-          to="/badgelist"
+          to={r.BADGES}
         >
           List
         </NavLink>
@@ -22,7 +23,7 @@ function Header() {
         <NavLink
           className="nav-link"
           activeClassName="nav-link-active"
-          to="/about"
+          to={r.ABOUT}
         >
           About
         </NavLink>
@@ -31,7 +32,7 @@ function Header() {
           className="nav-link"
           activeClassName="nav-link-active"
           exact
-          to="/account"
+          to={r.ACCOUNT}
         >
           My Account
         </NavLink>
@@ -40,7 +41,7 @@ function Header() {
           className="nav-link"
           activeClassName="nav-link-active"
           exact
-          to="/signIn"
+          to={r.SIGN_IN}
         >
           Sign in
         </NavLink>
