@@ -7,7 +7,7 @@ import {
 } from '../Session';
 import SignOutButton from '../Authentication/SignOut';
 import { withFirebase } from '../Firebase';
-import { PasswordForgetForm } from '../Authentication/PasswordForget';
+// import { PasswordForgetForm } from '../Authentication/PasswordForget';
 import PasswordChangeForm from '../Authentication/PasswordChange';
 
 const SIGN_IN_METHODS = [
@@ -32,12 +32,29 @@ const SIGN_IN_METHODS = [
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {(authUser) => (
-      <div>
-        <h1>Account: {authUser.email}</h1>
-        Forgot Your Password?  <PasswordForgetForm />
-        Reset Your Password.   <PasswordChangeForm />
+      <div className="container text-center add-padding-bottom">
+        <div className="usercard">
+          <div className="mt-3">
+            <img
+              className="profile-photo"
+              // src={authUser.photoURL}
+              src={"https://picsum.photos/200"}
+              width="100"
+              height="100"
+              alt="Profile"
+            />
+          </div>
+          <h3>{authUser.username}'s Account</h3>
+          <p>
+            <strong>Email: </strong>
+            {authUser.email}
+            <br />
+          </p>
+        </div>
+        <hr />
+        {/* Forgot Your Password? <PasswordForgetForm /> */}
+        Reset Your Password. <PasswordChangeForm />
         <LoginManagement authUser={authUser} />
-
         <SignOutButton />
       </div>
     )}
@@ -47,7 +64,7 @@ const AccountPage = () => (
 class LoginManagementBase extends Component {
   constructor(props) {
     super(props);
-    console.log(props.authUser)
+
     this.state = {
       activeSignInMethods: [],
       error: null,
@@ -99,12 +116,10 @@ class LoginManagementBase extends Component {
     return (
       <div>
         Sign In Methods:
-        <ul>
+        <ul className="social-links">
           {SIGN_IN_METHODS.map((signInMethod) => {
             const onlyOneLeft = activeSignInMethods.length === 1;
-            const isEnabled = activeSignInMethods.includes(
-              signInMethod.id,
-            );
+            const isEnabled = activeSignInMethods.includes(signInMethod.id);
 
             return (
               <li key={signInMethod.id}>
@@ -180,12 +195,7 @@ class DefaultLoginToggle extends Component {
   };
 
   render() {
-    const {
-      onlyOneLeft,
-      isEnabled,
-      signInMethod,
-      onUnlink,
-    } = this.props;
+    const { onlyOneLeft, isEnabled, signInMethod, onUnlink } = this.props;
 
     const { email, passwordOne, passwordTwo } = this.state;
 
@@ -213,6 +223,7 @@ class DefaultLoginToggle extends Component {
           placeholder="Email Address"
         />
         <input
+          className="form-input"
           name="passwordOne"
           autoComplete="new-password"
           value={passwordOne}
@@ -221,6 +232,7 @@ class DefaultLoginToggle extends Component {
           placeholder="New Password"
         />
         <input
+          className="form-input"
           name="passwordTwo"
           autoComplete="new-password"
           value={passwordTwo}
@@ -229,11 +241,7 @@ class DefaultLoginToggle extends Component {
           placeholder="Confirm New Password"
         />
 
-        <button
-          className="btn btn-primary"
-          disabled={isInvalid}
-          type="submit"
-        >
+        <button className="btn btn-primary" disabled={isInvalid} type="submit">
           Link {signInMethod.id}
         </button>
       </form>
