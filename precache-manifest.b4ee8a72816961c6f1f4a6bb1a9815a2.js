@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d40e9323a3e9fabcc96ec9a57ed3f416",
+    "revision": "10aa89159b078e9c519bcd7250dead21",
     "url": "/make-badges/index.html"
   },
   {
-    "revision": "b0a82fdf7db78a1cfba9",
-    "url": "/make-badges/static/css/main.8388feec.chunk.css"
+    "revision": "e6d5cd56a618f2819509",
+    "url": "/make-badges/static/css/main.b984aedc.chunk.css"
   },
   {
     "revision": "3c95a5f2ff70558fb9b5",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/make-badges/static/js/2.b3ef2401.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b0a82fdf7db78a1cfba9",
-    "url": "/make-badges/static/js/main.38126370.chunk.js"
+    "revision": "e6d5cd56a618f2819509",
+    "url": "/make-badges/static/js/main.765f0871.chunk.js"
   },
   {
     "revision": "4482d29b041a38302fe3",
