@@ -11,7 +11,7 @@ const SignInPage = () => (
   <div>
     <h1>SignIn</h1>
     <SignInForm />
-    {/* <SignInGoogle /> */}
+    <SignInGoogle />
     {/* <SignInFacebook /> */}
     {/* <SignInTwitter /> */}
     <PasswordForgetLink />
@@ -49,7 +49,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push("/");
+        this.props.history.push("/badges");
       })
       .catch(error => {
         this.setState({ error });
