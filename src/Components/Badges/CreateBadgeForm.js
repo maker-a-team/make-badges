@@ -9,7 +9,7 @@ class CreateBadgeForm extends Component {
     super(props);
 
     this.state = {
-      editMode:false,
+      editMode: false,
       loading: false,
 
       limit: 25,
@@ -160,9 +160,9 @@ class CreateBadgeForm extends Component {
                   <input
                     className="form-control form-input col-10"
                     type="text"
-                    placeholder="Badge Image URL"
-                    value={image}
-                    name="image"
+                    placeholder="Badge Link"
+                    value={link}
+                    name="link"
                     onChange={this.onChange}
                   />
                 </div>
@@ -170,9 +170,9 @@ class CreateBadgeForm extends Component {
                   <input
                     className="form-control form-input col-10"
                     type="text"
-                    placeholder="Badge Link"
-                    value={link}
-                    name="link"
+                    placeholder="Badge Image URL"
+                    value={image}
+                    name="image"
                     onChange={this.onChange}
                   />
                 </div>

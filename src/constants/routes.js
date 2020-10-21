@@ -10,3 +10,4 @@ export const PASSWORD_RESSET = "/pw-reset";
 export const BADGES = '/badges';
 export const BADGE_DETAILS = '/badges/:id'
 export const CREATE_BADGE = '/badges/new'
+export const CREATE_BADGE_PHOTO = '/badges/new-photo'
