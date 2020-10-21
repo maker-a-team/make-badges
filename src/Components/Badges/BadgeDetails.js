@@ -45,7 +45,7 @@ class BadgeItem extends Component {
           <div className="Badge">
             <h2>Badge ({this.props.match.params.id})</h2>
             <div>
-              <img className="Badge-image" src={`${badge.image}`} alt="badge" /><br />
+              <img className="Badge-image" src={badge.image} alt="badge" /><br />
             </div>
 
             <strong>Badge Name:</strong> {badge.name}

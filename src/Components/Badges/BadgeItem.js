@@ -115,7 +115,7 @@ class BadgeItem extends Component {
             <br />
             <img
               className="Badge-image"
-              src={`${badge.image}`}
+              src={badge.image}
               alt="badge"
             />
             <br />
