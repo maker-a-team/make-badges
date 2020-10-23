@@ -1,7 +1,7 @@
 {
   "name": "make-badges",
-  "homepage": "https://maker-a-team.github.io/",
-  "version": "0.1.5",
+  "homepage": "https://maker-a-team.github.io/make-badges/#/",
+  "version": "0.1.6",
   "private": true,
   "dependencies": {
     "@firebase/app": "^0.6.11",
