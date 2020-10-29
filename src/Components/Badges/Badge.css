@@ -1,16 +1,25 @@
 .BadgeList {
-  display: grid;
-  grid-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
+  /* width: calc(100% - 100px); */
   list-style: none;
+  grid-gap: 10px;
+  display: grid;
   margin: auto;
-  width: calc(100% - 100px);
+  padding: 0px;
 }
 
 .Badge {
+  border: black 1px solid;
+}
+
+/* .Badge-info {
   width: 100%;
   text-align: center;
-}
+} */
+
+/* .Badge-buttons {
+
+}  */
 
 .Badge-image {
   width: 100%;
@@ -18,3 +27,39 @@
   opacity: 0.2;
 }
 
+
+/* Needs to be applied to BadgeList.md &/or the badgelist in components > badges > badgelist */
+/* .badge-gallery {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+}
+
+.badge-gallery > img {
+  width: 100%;
+}
+
+.badge-gallery.javascript > img {
+  filter: hue-rotate(30deg);
+}
+
+.badge-gallery.react > img {
+  filter: hue-rotate(60deg);
+}
+
+.badge-gallery.cs > img {
+  filter: hue-rotate(90deg);
+}
+
+.badge-gallery.mobile > img {
+  filter: hue-rotate(120deg);
+}
+
+.badge-gallery.job > img {
+  filter: hue-rotate(150deg);
+}
+
+.badge-gallery.sa > img {
+  filter: hue-rotate(180deg);
+} */

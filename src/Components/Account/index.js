@@ -11,39 +11,25 @@ import { withFirebase } from '../Firebase';
 import PasswordChangeForm from '../Authentication/PasswordChange';
 
 const SIGN_IN_METHODS = [
-  {
-    id: 'password',
-    provider: null,
-  },
-  {
-    id: 'google.com',
-    provider: 'googleProvider',
-  },
-  {
-    id: 'facebook.com',
-    provider: 'facebookProvider',
-  },
-  {
-    id: 'twitter.com',
-    provider: 'twitterProvider',
-  },
+  {id: 'password', provider: null},
+  {id: 'google.com', provider: 'googleProvider'},
+  // {id: 'facebook.com', provider: 'facebookProvider'},
+  // {id: 'twitter.com', provider: 'twitterProvider'},
 ];
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {(authUser) => (
-      <div className="container text-center add-padding-bottom">
+      <div className="AccountPage">
         <div className="usercard">
-          <div className="mt-3">
-            <img
-              className="profile-photo"
-              // src={authUser.photoURL}
-              src={"https://picsum.photos/200"}
-              width="100"
-              height="100"
-              alt="Profile"
-            />
-          </div>
+          <img
+            className="profile-photo"
+            // src={authUser.photoURL}
+            src={"https://picsum.photos/200"}
+            width="100"
+            height="100"
+            alt="Profile"
+          />
           <h3>{authUser.username}'s Account</h3>
           <p>
             <strong>Email: </strong>

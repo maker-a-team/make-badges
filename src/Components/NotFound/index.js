@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import PageNotFound from "../assets/images/PageNotFound";
 
-class NotFoundPage extends React.Component {
+class NotFoundPage extends Component {
   render() {
     return (
-      <div>
+      <div className="NotFoundPage">
         {/* <img src={PageNotFound} /> */}
         <h1>Oops!</h1>
         <h2>We can't seem to find the page you're looking for.</h2>
@@ -16,4 +16,5 @@ class NotFoundPage extends React.Component {
     );
   }
 }
+
 export default NotFoundPage;

@@ -1,15 +1,14 @@
 /*  src/Header/Header.css  */
 .Header {
   background-color: var(--color-dark-grey);
-  justify-content: flex-start;
   align-items: center;
   display: flex;
 }
 
 .nav-logo {
   margin-left: 1rem;
-  height: 100px;
-  width: 100px;
+  width: 150px;
+  height: auto;
 }
 
 .nav-items {
@@ -17,13 +16,14 @@
 }
 
 .nav-link {
-  display: inline-block;
-  padding: 0.1em 1em;
   color: rgba(255, 255, 255, 0.835);
-  font-weight: bold;
+  display: inline-block;
   text-decoration: none;
+  padding: 0.1em 1em;
+  font-weight: bold;
 }
+
 .nav-link-active {
-  color: #fff;
   border-bottom: 2px solid;
+  color: #fff;
 }

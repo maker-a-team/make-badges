@@ -5,7 +5,7 @@ import { compose } from 'recompose';
 import { withFirebase } from '../../Firebase';
 
 const SignUpPage = () => (
-  <div>
+  <div className="SignUpPage">
     <h1>SignUp</h1>
     <SignUpForm />
   </div>

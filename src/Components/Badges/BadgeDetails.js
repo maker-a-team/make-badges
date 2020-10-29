@@ -38,11 +38,11 @@ class BadgeItem extends Component {
     const { badge, loading } = this.state;
 
     return (
-      <div>
+      <div className="BadgeDetailsPage">
         {loading && <div>Loading ...</div>}
 
         {badge && (
-          <div className="Badge">
+          <div className="Badge-info">
             <h2>Badge ({this.props.match.params.id})</h2>
             <div>
               <img className="Badge-image" src={badge.image} alt="badge" /><br />

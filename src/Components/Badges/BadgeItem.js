@@ -61,7 +61,7 @@ class BadgeItem extends Component {
     } = this.state;
 
     return (
-      <li key={badge.uid} className="row">
+      <li className="Badge" key={badge.uid}>
         {editMode ? (
           <div className="text-center">
             <input
@@ -106,7 +106,7 @@ class BadgeItem extends Component {
             />
           </div>
         ) : (
-          <div className="Badge col-10">
+          <div className="Badge-info">
             <strong>category: </strong> {badge.category}
             <br />
             <strong>name: </strong> {badge.name}
@@ -135,7 +135,7 @@ class BadgeItem extends Component {
         )}
 
         {authUser.uid === badge.ownerID && (
-          <div className="">
+          <div className="badge-buttons">
             {editMode ? (
               <div className="justify-me">
                 <button

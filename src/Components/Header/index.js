@@ -16,14 +16,6 @@ function Header() {
         <NavLink
           className="nav-link"
           activeClassName="nav-link-active"
-          to={r.ABOUT}
-        >
-          About
-        </NavLink>
-
-        <NavLink
-          className="nav-link"
-          activeClassName="nav-link-active"
           exact
           to={r.ACCOUNT}
         >
@@ -38,15 +30,6 @@ function Header() {
         >
           List
         </NavLink>
-
-        {/* <NavLink
-          className="nav-link"
-          activeClassName="nav-link-active"
-          exact
-          to={r.SIGN_IN}
-        >
-          Sign in
-        </NavLink> */}
       </div>
     </header>
   );
