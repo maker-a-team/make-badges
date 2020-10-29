@@ -113,16 +113,12 @@ class BadgeItem extends Component {
             <br />
             <strong>description: </strong> {badge.description}
             <br />
-            <img
-              className="Badge-image"
-              src={badge.image}
-              alt="badge"
-            />
+            <img className="Badge-image" src={badge.image} alt="badge" />
             <br />
             <Link
               to={{
                 pathname: `${r.BADGES}/${badge.uid}`,
-                state: { badge },
+                state: { badge, authUser },
               }}
             >
               Details
