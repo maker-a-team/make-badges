@@ -24,7 +24,7 @@ body {
 .LandingPage, .NotFoundPage,
 .SignUpPage, .SignInPage, .AccountPage,
 .CreateBadgePage, .BadgeListPage, .BadgeDetailsPage {
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem);
   margin: 3rem auto;
 }
 
