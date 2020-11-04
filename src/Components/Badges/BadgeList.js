@@ -64,7 +64,7 @@ class BadgeList extends Component {
     return (
       <AuthUserContext.Consumer>
         {(authUser) => (
-          <div className="BadgeListPage">
+          <div id="content-wrap" className="BadgeListPage">
             <h2>Badge List</h2>
 
             {loading && <div>Loading ...</div>}

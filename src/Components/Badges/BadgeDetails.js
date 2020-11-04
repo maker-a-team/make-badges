@@ -43,7 +43,7 @@ class BadgeItem extends Component {
     const { loading, badge, AwardEarned } = this.state;
 
     return (
-      <div className="BadgeDetailsPage">
+      <div id="content-wrap" className="BadgeDetailsPage">
         {loading && <div>Loading ...</div>}
 
         {badge && (

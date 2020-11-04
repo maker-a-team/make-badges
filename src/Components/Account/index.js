@@ -16,7 +16,7 @@ import SignOutButton from "../Authentication/SignOut";
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {(authUser) => (
-      <div className="AccountPage">
+      <div id="content-wrap" className="AccountPage">
         <div className="usercard">
           <img
             className="profile-photo"

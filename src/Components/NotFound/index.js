@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class NotFoundPage extends Component {
   render() {
     return (
-      <div className="NotFoundPage">
+      <div id="content-wrap" className="NotFoundPage">
         {/* <img src={PageNotFound} /> */}
         <h1>Oops!</h1>
         <h2>We can't seem to find the page you're looking for.</h2>

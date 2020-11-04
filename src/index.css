@@ -21,13 +21,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.LandingPage, .NotFoundPage,
-.SignUpPage, .SignInPage, .AccountPage,
-.CreateBadgePage, .BadgeListPage, .BadgeDetailsPage {
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
   width: calc(100% - 2rem);
   margin: 3rem auto;
+}
+
+#Footer {
+  background-color: var(--color-dark-grey);
+  color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 1em;
+  position: absolute;
+  height: 2.5rem;            /* Footer height */
+  bottom: 0;
+  width: 100%;
+}
+
+#Header {
+  background-color: var(--color-dark-grey);
+  align-items: center;
+  display: flex;
+}
+
+#nav-logo {
+  margin-left: 1rem;
+  width: 150px;
+  height: auto;
+}
+
+#nav-items {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.835);
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.1em 1em;
+  font-weight: bold;
+}
+
+.nav-link-active {
+  border-bottom: 2px solid;
+  color: #fff;
 }
 
 .social-links {
   list-style: none;
 }
+
+/* .LandingPage, .NotFoundPage,
+.PasswordForgetPage,
+.SignUpPage, .SignInPage, .AccountPage,
+.CreateBadgePage, .BadgeListPage, .BadgeDetailsPage {
+  width: calc(100% - 2rem);
+  margin: 3rem auto;
+} */

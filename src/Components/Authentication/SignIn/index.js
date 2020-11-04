@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from "react-router-dom";
 import { compose } from 'recompose';
 
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../../Firebase';
-// import * as ROUTES from '../../constants/routes';
+import { BADGES, SIGN_IN } from "../../../constants/routes";
 
 const SignInPage = () => (
-  <div className="SignInPage">
+  <div id="content-wrap">
     <h1>SignIn</h1>
     <SignInForm />
     <SignInGoogle />
@@ -49,7 +49,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push("/badges");
+        this.props.history.push(BADGES);
       })
       .catch(error => {
         this.setState({ error });
@@ -110,12 +110,11 @@ class SignInGoogleBase extends Component {
         return this.props.firebase.user(socialAuthUser.user.uid).set({
           username: socialAuthUser.user.displayName,
           email: socialAuthUser.user.email,
-          roles: {},
         });
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push("/");
+        this.props.history.push(BADGES);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -156,12 +155,11 @@ class SignInFacebookBase extends Component {
         return this.props.firebase.user(socialAuthUser.user.uid).set({
           username: socialAuthUser.additionalUserInfo.profile.name,
           email: socialAuthUser.additionalUserInfo.profile.email,
-          roles: {},
         });
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push("/");
+        this.props.history.push(BADGES);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -202,12 +200,11 @@ class SignInTwitterBase extends Component {
         return this.props.firebase.user(socialAuthUser.user.uid).set({
           username: socialAuthUser.additionalUserInfo.profile.name,
           email: socialAuthUser.additionalUserInfo.profile.email,
-          roles: {},
         });
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push("/");
+        this.props.history.push(BADGES);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -233,6 +230,12 @@ class SignInTwitterBase extends Component {
   }
 }
 
+const SignInLink = () => (
+  <p>
+    Already have an account? <Link to={SIGN_IN}>Sign In</Link>
+  </p>
+);
+
 const SignInForm = compose(
   withRouter,
   withFirebase,
@@ -255,4 +258,4 @@ const SignInTwitter = compose(
 
 export default SignInPage;
 
-export { SignInForm, SignInGoogle, SignInFacebook, SignInTwitter };
+export { SignInLink, SignInForm, SignInGoogle, SignInFacebook, SignInTwitter };

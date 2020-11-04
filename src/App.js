@@ -20,11 +20,12 @@ import BadgesPage from "./Components/Badges";
 import NotFoundPage from "./Components/NotFound";
 
 import { withAuthentication } from "../src/Components/Session";
+import AwardBadgePage from "./Components/Badges/AwardBadge";
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div id="page-container" className="App">
         <Header />
 
         <Switch>
@@ -35,6 +36,7 @@ function App() {
           <Route exact path={r.ACCOUNT} component={AccountPage} />
           <Route exact path={r.PASSWORD_FORGET} component={PasswordForgetPage} />
           <Route exact path={r.PASSWORD_RESSET} component={PasswordChangeForm} />
+          <Route exact path={r.AWARD_BADGE} component={AwardBadgePage} />
           <Route path={r.BADGES} component={BadgesPage} />
           <Route path="*" component={NotFoundPage} />
         </Switch>

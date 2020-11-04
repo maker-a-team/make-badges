@@ -50,28 +50,25 @@ class Firebase {
   doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
 
-  doSignInWithGoogle = () =>
-    this.auth.signInWithPopup(this.googleProvider);
+  doSignInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider);
 
-  doSignInWithFacebook = () =>
-    this.auth.signInWithPopup(this.facebookProvider);
+  doSignInWithFacebook = () => this.auth.signInWithPopup(this.facebookProvider);
 
-  doSignInWithTwitter = () =>
-    this.auth.signInWithPopup(this.twitterProvider);
+  doSignInWithTwitter = () => this.auth.signInWithPopup(this.twitterProvider);
 
   doSignOut = () => this.auth.signOut();
 
-  doPasswordReset = (email) =>
-    this.auth.sendPasswordResetEmail(email);
+  doPasswordReset = (email) => this.auth.sendPasswordResetEmail(email);
+
+  doPasswordUpdate = (password) =>
+    this.auth.currentUser.updatePassword(password);
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
       url:
         process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT ||
-        'http://localhost:3000/',
+        "http://localhost:3000/",
     });
-  doPasswordUpdate = (password) =>
-    this.auth.currentUser.updatePassword(password);
 
   // *** Merge Auth and DB User API *** //
 
@@ -79,7 +76,7 @@ class Firebase {
     this.auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         this.user(authUser.uid)
-          .once('value')
+          .once("value")
           .then((snapshot) => {
             const dbUser = snapshot.val();
 
@@ -108,14 +105,21 @@ class Firebase {
 
   user = (uid) => this.db.ref(`users/${uid}`);
 
-  users = () => this.db.ref('users');
+  users = () => this.db.ref("users");
 
   // *** Badge API ***
 
   badge = (uid) => this.db.ref(`badges/${uid}`);
 
-  badges = () => this.db.ref('badges');
+  badges = () => this.db.ref("badges");
 
+  doAwardBadge = (userID, badgeID) => {
+    var updates = {};
+    updates[`badges/${badgeID}/winners`] += userID;
+    updates[`users/${userID}/awardsEarned`] += badgeID;
+
+    return this.db.ref().update(updates);
+  }
 }
 
 export default Firebase;

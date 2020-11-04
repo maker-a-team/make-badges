@@ -121,7 +121,7 @@ class CreateBadgeForm extends Component {
     return (
       <AuthUserContext.Consumer>
         {(authUser) => (
-          <div className="CreateBadgePage">
+          <div id="content-wrap" className="CreateBadgePage">
             <h1>Create A New Badge</h1>
 
             <form onSubmit={(event) => this.onCreateBadge(event, authUser)}>

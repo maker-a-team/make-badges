@@ -1,18 +1,17 @@
 // src/Header/Title.js
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Header.css";
 import logo from "../../logo-white.svg";
 import * as r from '../../constants/routes';
 
 function Header() {
   return (
-    <header className="Header">
+    <header id="Header">
       <a href="https://makeschool.com/portal">
-        <img src={logo} className="nav-logo" alt="logo" />
+        <img src={logo} id="nav-logo" alt="logo" />
       </a>
 
-      <div className="nav-items">
+      <div id="nav-items">
         <NavLink
           className="nav-link"
           activeClassName="nav-link-active"

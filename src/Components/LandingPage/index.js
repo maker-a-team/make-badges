@@ -6,7 +6,7 @@ import { ACCOUNT } from "../../constants/routes";
 class LandingPage extends Component {
   render() {
     return (
-      <div className="LandingPage">
+      <div id="content-wrap" className="LandingPage">
         <h1>Welcome To Make Badges</h1>
         <p>
           First Project of the Make School A-Team to provide achievement

@@ -3,11 +3,14 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../../Firebase';
+import { BADGES, SIGN_UP } from '../../../constants/routes';
+import { SignInLink } from '../SignIn';
 
 const SignUpPage = () => (
-  <div className="SignUpPage">
+  <div id="content-wrap" className="SignUpPage">
     <h1>SignUp</h1>
     <SignUpForm />
+    <SignInLink />
   </div>
 );
 
@@ -43,15 +46,18 @@ class SignUpFormBase extends Component {
 
     if (isAdmin) {
       roles["Priority"] = "ADMIN";
+    } else {
+      roles["Priority"] = "STUDENT"
     }
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
+      .then(() => {
+        return this.props.firebase.doSendEmailVerification();
+      })
       .then((authUser) => {
         authUser.user.updateProfile({
           displayName: username,
-          photoURL:
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fctorthopaedic.com%2Fhome%2Fprofile-silhouette%2F&psig=AOvVaw030D0jVKxOxcwnfD2cJLwD&ust=1601667943801000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCK1ZiUlOwCFQAAAAAdAAAAABAD",
         });
         // Create a user in your Firebase realtime database
         return this.props.firebase.user(authUser.user.uid).set({
@@ -61,12 +67,8 @@ class SignUpFormBase extends Component {
         });
       })
       .then(() => {
-
-        return this.props.firebase.doSendEmailVerification();
-      })
-      .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push("/badges");
+        this.props.history.push(BADGES);
       })
       .catch((error) => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -177,9 +179,6 @@ class SignUpFormBase extends Component {
         <button disabled={isInvalid} type="submit">
           Sign Up
         </button>
-        <br />
-        <br />
-        <br />
 
         {error && <p>{error.message}</p>}
       </form>
@@ -189,7 +188,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <Link to={"/signUp"}>Sign Up</Link>
+    Don't have an account? <Link to={SIGN_UP}>Sign Up</Link>
   </p>
 );
 

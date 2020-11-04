@@ -1,9 +1,9 @@
----
+--- 
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: your_title
+labels: your_label
+assignees: your_username
 
 ---
 
@@ -39,7 +39,3 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
-
-<!-- Adapted From: -->
-<!-- https://github.com/expo/create-react-native-app/blob/master/.github/ISSUE_TEMPLATE/bug_report.md -->
-<!-- https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository -->

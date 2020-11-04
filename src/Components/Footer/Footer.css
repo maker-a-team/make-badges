@@ -1,9 +1,0 @@
-/*  src/Footer/Footer.css  */
-.Footer {
-  background-color: var(--color-dark-grey);
-  color: rgba(255, 255, 255, 0.75);
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 1em;
-  width: 100%;
-}

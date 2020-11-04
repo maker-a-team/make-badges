@@ -10,7 +10,8 @@
             "[Delete]: ",
             "[Fix]: ",
             "[Merge]: ",
-            "[Test]: "
+            "[Test]: ",
+            "[Init]"
         ],
         "regexp": "docs\\(v[0-9]\\): "
     }

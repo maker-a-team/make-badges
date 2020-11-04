@@ -1,5 +1,8 @@
-name: "PR Title Checker"
+name: "Title Checker"
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types:
       - opened
