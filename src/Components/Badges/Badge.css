@@ -1,10 +1,9 @@
 .BadgeList {
   grid-template-columns: 1fr 1fr 1fr;
-  /* width: calc(100% - 100px); */
   list-style: none;
   grid-gap: 10px;
   display: grid;
-  margin: auto;
+  margin: auto auto 3rem;
   padding: 0px;
 }
 
@@ -32,39 +31,28 @@
   opacity: 1;
 }
 
-
 /* Needs to be applied to BadgeList.md &/or the badgelist in components > badges > badgelist */
-/* .badge-gallery {
-  display: grid;
-  width: 600px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: auto;
-}
-
-.badge-gallery > img {
-  width: 100%;
-}
-
-.badge-gallery.javascript > img {
+/*
+.BadgeList.javascript > img {
   filter: hue-rotate(30deg);
 }
 
-.badge-gallery.react > img {
+.BadgeList.react > img {
   filter: hue-rotate(60deg);
 }
 
-.badge-gallery.cs > img {
+.BadgeList.cs > img {
   filter: hue-rotate(90deg);
 }
 
-.badge-gallery.mobile > img {
+.BadgeList.mobile > img {
   filter: hue-rotate(120deg);
 }
 
-.badge-gallery.job > img {
+.BadgeList.job > img {
   filter: hue-rotate(150deg);
 }
 
-.badge-gallery.sa > img {
+.BadgeList.sa > img {
   filter: hue-rotate(180deg);
 } */
