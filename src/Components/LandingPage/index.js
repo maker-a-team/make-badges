@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { ACCOUNT } from "../../constants/routes";
-// import PageNotFound from "../assets/images/PageNotFound";
+import { BADGES } from "../../constants/routes";
 
 class LandingPage extends Component {
   render() {
@@ -14,8 +13,8 @@ class LandingPage extends Component {
           topics.
         </p>
 
-        <Link to={ACCOUNT}>
-          <button>Go To Your Account Page</button>
+        <Link to={BADGES}>
+          <button>Go To The Badge Wall</button>
         </Link>
       </div>
     );

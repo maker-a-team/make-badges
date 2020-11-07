@@ -1,5 +1,5 @@
 // src/App.js
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React from "react";
 import * as r from './constants/routes';
 import "./App.css";
@@ -20,7 +20,6 @@ import BadgesPage from "./Components/Badges";
 import NotFoundPage from "./Components/NotFound";
 
 import { withAuthentication } from "../src/Components/Session";
-import AwardBadgePage from "./Components/Badges/AwardBadge";
 
 function App() {
   return (
@@ -36,7 +35,6 @@ function App() {
           <Route exact path={r.ACCOUNT} component={AccountPage} />
           <Route exact path={r.PASSWORD_FORGET} component={PasswordForgetPage} />
           <Route exact path={r.PASSWORD_RESSET} component={PasswordChangeForm} />
-          <Route exact path={r.AWARD_BADGE} component={AwardBadgePage} />
           <Route path={r.BADGES} component={BadgesPage} />
           <Route path="*" component={NotFoundPage} />
         </Switch>

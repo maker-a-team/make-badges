@@ -46,7 +46,7 @@ class AwardBadgeFormBase extends Component {
   render() {
     const { userID, badgeID, error } = this.state;
 
-    const isInvalid = userID = badgeID === '';
+    const isInvalid = userID === "" || badgeID === "";
 
     return (
       <form onSubmit={this.onSubmit}>

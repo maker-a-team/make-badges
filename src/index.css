@@ -46,6 +46,7 @@ body {
   background-color: var(--color-dark-grey);
   align-items: center;
   display: flex;
+  padding: 1rem 0;
 }
 
 #nav-logo {

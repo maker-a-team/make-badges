@@ -10,8 +10,12 @@ class BadgeItem extends Component {
       loading: false,
       badge: null,
       AwardEarned: false,
+      BADGE_ID: this.props.match.params.id,
+      authUser: this.props.authUser,
       ...props.location.state,
     };
+
+    console.log(this.state);
   }
 
   componentDidMount() {
@@ -21,22 +25,37 @@ class BadgeItem extends Component {
 
     this.setState({ loading: true });
 
-    this.props.firebase.badge(this.props.match.params.id)
-      .on("value", (snapshot) => {
-        this.setState({
-          badge: snapshot.val(),
-          loading: false,
-        });
+    this.props.firebase.badge(this.state.BADGE_ID).on("value", (snapshot) => {
+      this.setState({
+        badge: snapshot.val(),
+        AwardEarned: false,
+        BADGE_ID: this.props.match.params.id,
+        authUser: this.props.authUser,
+        loading: false,
       });
+    });
   }
 
   componentWillUnmount() {
-    this.props.firebase.badge(this.props.match.params.id).off();
+    this.props.firebase.badge(this.state.BADGE_ID).off();
   }
+
+  onSubmit = (event) => {
+    const { authUser, BADGE_ID, badge } = this.state;
+    
+    const report = this.props.firebase.doAwardBadge(authUser.uid, BADGE_ID, badge.name)
+    console.log(report)
+    this.setState({ AwardEarned: true });
+
+    event.preventDefault();
+  };
+
+  onChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   onChangeCheckbox = (event) => {
     this.setState({ [event.target.name]: event.target.checked });
-    // this.props.firebase.badge(this.props.match.params.id).push({"winner": this.state.authUser.uid});
   };
 
   render() {
@@ -48,7 +67,7 @@ class BadgeItem extends Component {
 
         {badge && (
           <div className="Badge-info">
-            <h2>Badge ({this.props.match.params.id})</h2>
+            <h3>Badge ({this.state.BADGE_ID})</h3>
             <img
               className={(AwardEarned && "Earned") || "Badge-image"}
               src={badge.image}
@@ -62,8 +81,18 @@ class BadgeItem extends Component {
             <br />
             <a href={badge.link}>Badgr Page for this Badge</a>
             <br />
+            <br />
+            <br />
+            Have you earned this award yet:
+            {("Yes" && AwardEarned) ||
+              ("No" && (
+                <button onClick={this.onSubmit} type="submit">
+                  Earn This Badge
+                </button>
+              ))}
+            <br />
             <label>
-              Earn this Award:
+              Overide Request:
               <input
                 name="AwardEarned"
                 type="checkbox"
@@ -71,8 +100,6 @@ class BadgeItem extends Component {
                 onChange={this.onChangeCheckbox}
               />
             </label>
-            <br />
-            Have you earned this award yet: {(AwardEarned && "Yes") || "No"}
           </div>
         )}
       </div>

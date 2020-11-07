@@ -16,18 +16,18 @@ function Header() {
           className="nav-link"
           activeClassName="nav-link-active"
           exact
-          to={r.ACCOUNT}
+          to={r.BADGES}
         >
-          Account
+          Badges
         </NavLink>
 
         <NavLink
           className="nav-link"
           activeClassName="nav-link-active"
           exact
-          to={r.BADGES}
+          to={r.ACCOUNT}
         >
-          List
+          Account
         </NavLink>
       </div>
     </header>

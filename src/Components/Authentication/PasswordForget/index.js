@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { withFirebase } from '../../Firebase';
-import { PASSWORD_FORGET } from '../../../constants/routes';
+import { LANDING, PASSWORD_FORGET } from '../../../constants/routes';
 
 const PasswordForgetPage = () => (
   <div id="content-wrap" className="PasswordForgetPage">
     <h1>PasswordForget</h1>
     <PasswordForgetForm />
+    <p>
+      <Link to={LANDING}>Nevermind Go Back</Link>
+    </p>
   </div>
 );
 
