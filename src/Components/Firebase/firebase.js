@@ -1,7 +1,9 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
-import "firebase/storage";
+import 'firebase/storage';
+import 'firebase/analytics';
+
 
 // const config = {
 //   apiKey: process.env.REACT_APP_API_KEY,
@@ -11,6 +13,7 @@ import "firebase/storage";
 //   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
 //   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 // };
+
 
 const config = {
   apiKey: "AIzaSyBpxbPor7YSFc5J6q0lw79CVXYYAjLvlos",
@@ -22,6 +25,7 @@ const config = {
   appId: "1:360872796104:web:7692a1e1e0c89e77c16afd",
   measurementId: "G-0F7RZM57QH",
 };
+
 
 class Firebase {
   constructor() {
@@ -35,6 +39,7 @@ class Firebase {
     this.auth = app.auth();
     this.db = app.database();
     this.storage = app.storage();
+    this.analytics = app.analytics();
 
     /* Social Sign In Method Provider */
     this.googleProvider = new app.auth.GoogleAuthProvider();
@@ -42,8 +47,8 @@ class Firebase {
     this.twitterProvider = new app.auth.TwitterAuthProvider();
   }
 
-  // *** Auth API ***
 
+  // *** Auth API ***
   doCreateUserWithEmailAndPassword = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password);
 
@@ -70,8 +75,8 @@ class Firebase {
         "http://localhost:3000/",
     });
 
-  // *** Merge Auth and DB User API *** //
 
+  // *** Merge Auth and DB User API *** //
   onAuthUserListener = (next, fallback) =>
     this.auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -101,16 +106,14 @@ class Firebase {
       }
     });
 
+
   // *** User API ***
-
   user = (uid) => this.db.ref(`users/${uid}`);
-
   users = () => this.db.ref("users");
 
+
   // *** Badge API ***
-
   badge = (uid) => this.db.ref(`badges/${uid}`);
-
   badges = () => this.db.ref("badges");
 
   doAwardBadge = (userID, badgeID, badgeName) => {
