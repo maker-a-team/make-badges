@@ -1,5 +1,5 @@
 // src/App.js
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import React from "react";
 import * as r from './constants/routes';
 import "./App.css";
