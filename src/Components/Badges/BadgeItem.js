@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-import * as r from "../../constants/routes";
+import * as r from "../../routes";
 
 class BadgeItem extends Component {
   constructor(props) {

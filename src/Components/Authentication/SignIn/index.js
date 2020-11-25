@@ -5,7 +5,7 @@ import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../../Firebase';
-import { BADGES, SIGN_IN } from "../../../constants/routes";
+import { BADGES, SIGN_IN } from "../../../routes";
 
 const SignInPage = () => (
   <div id="content-wrap">

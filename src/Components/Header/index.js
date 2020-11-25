@@ -2,7 +2,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../logo-white.svg";
-import * as r from '../../constants/routes';
+import * as r from '../../routes';
 
 function Header() {
   return (

@@ -4,7 +4,8 @@ import { compose } from 'recompose';
 
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
-// import * as ROUTES from '../../constants/routes';
+import { ACCOUNT, SIGN_IN } from '../../routes';
+
 
 const withAuthorization = condition => Component => {
   class WithAuthorization extends React.Component {
@@ -12,10 +13,10 @@ const withAuthorization = condition => Component => {
       this.listener = this.props.firebase.onAuthUserListener(
         authUser => {
           if (!condition(authUser)) {
-            this.props.history.push("/signIn");
+            this.props.history.push(ACCOUNT);
           }
         },
-        () => this.props.history.push("/signIn"),
+        () => this.props.history.push(SIGN_IN),
       );
     }
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { BADGES } from "../../constants/routes";
+import { BADGES } from "../../routes";
 
 class LandingPage extends Component {
   render() {

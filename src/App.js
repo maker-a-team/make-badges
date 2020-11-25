@@ -1,7 +1,7 @@
 // src/App.js
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import React from "react";
-import * as r from './constants/routes';
+import * as r from './routes';
 import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -11,10 +11,10 @@ import {
   SignInPage,
   PasswordForgetPage,
   PasswordChangeForm,
-  SignOutButton,
+  // SignOutButton,
 } from "./Components/Authentication";
 
-import LandingPage from "./Components/LandingPage";
+// import LandingPage from "./Components/LandingPage";
 import AccountPage from "./Components/Account";
 import BadgesPage from "./Components/Badges";
 import NotFoundPage from "./Components/NotFound";
@@ -28,10 +28,10 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path={r.LANDING} component={LandingPage} />
-          <Route exact path={r.SIGN_UP} component={SignUpPage} />
+          {/* <Route exact path={r.LANDING} component={LandingPage} /> */}
           <Route exact path={r.SIGN_IN} component={SignInPage} />
-          <Route exact path={r.SIGN_OUT} component={SignOutButton} />
+          <Route exact path={r.SIGN_UP} component={SignUpPage} />
+          {/* <Route exact path={r.SIGN_OUT} component={SignOutButton} /> */}
           <Route exact path={r.ACCOUNT} component={AccountPage} />
           <Route exact path={r.PASSWORD_FORGET} component={PasswordForgetPage} />
           <Route exact path={r.PASSWORD_RESSET} component={PasswordChangeForm} />

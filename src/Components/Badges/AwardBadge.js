@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { withFirebase } from '../Firebase';
-import { AWARD_BADGE } from '../../constants/routes';
+import { AWARD_BADGE } from '../../routes';
 
 const AwardBadgePage = () => (
   <div id="content-wrap">

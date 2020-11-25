@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { compose } from "recompose";
-import * as r from '../../constants/routes';
+import * as r from '../../routes';
 
 import './Badge.css'
 import BadgeList from "./BadgeList";
