@@ -106,14 +106,12 @@ class Firebase {
   badge = (uid) => this.db.ref(`badges/${uid}`);
   badges = () => this.db.ref("badges");
 
-  doAwardBadge = (userID, badgeID, badgeName) => {
-    // var updates = {};
-    // updates["/users/" + userID + "/awardsEarned/"] = badgeID;
-    // updates["/badges/" + badgeID + "/winners/"] = userID;
-
-    console.log("User: " + userID + " Submitted a Badge Request for ID: " + badgeID);
-    // return this.db.ref().update(updates);
-    return this.db.ref("users/" + userID).child("awardsEarned").set("fuckt this shit");
+  doAwardBadge = (userID, userName, badgeID, badgeName) => {
+    console.log(`User: ${userID} Submitted a Badge Request for ${badgeName} ID: ${badgeID}`);
+    
+    this.db.ref('users/' + userID + '/badges/').child(badgeName).set(badgeID);
+    // this.badge(badgeID).child("winners").child(userName).set(userID);
+    // this.db.ref('badges/' + badgeID + '/winners/').child(userName).set({userID});
   }
 }
 

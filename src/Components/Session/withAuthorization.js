@@ -4,7 +4,7 @@ import { compose } from 'recompose';
 
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
-import { ACCOUNT, SIGN_IN } from '../../routes';
+import { LANDING, SIGN_IN } from '../../routes';
 
 
 const withAuthorization = condition => Component => {
@@ -13,7 +13,7 @@ const withAuthorization = condition => Component => {
       this.listener = this.props.firebase.onAuthUserListener(
         authUser => {
           if (!condition(authUser)) {
-            this.props.history.push(ACCOUNT);
+            this.props.history.push(LANDING);
           }
         },
         () => this.props.history.push(SIGN_IN),

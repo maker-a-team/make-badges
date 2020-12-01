@@ -1,5 +1,5 @@
 // src/App.js
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import React from "react";
 import * as r from './routes';
 import "./App.css";
@@ -28,7 +28,7 @@ function App() {
         <Header />
 
         <Switch>
-          {/* <Route exact path={r.LANDING} component={LandingPage} /> */}
+          <Route exact path={r.LANDING}><Redirect to={r.BADGES} /></Route>
           <Route exact path={r.SIGN_IN} component={SignInPage} />
           <Route exact path={r.SIGN_UP} component={SignUpPage} />
           {/* <Route exact path={r.SIGN_OUT} component={SignOutButton} /> */}

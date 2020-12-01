@@ -14,8 +14,6 @@ class BadgeItem extends Component {
       authUser: this.props.authUser,
       ...props.location.state,
     };
-
-    console.log(this.state);
   }
 
   componentDidMount() {
@@ -43,8 +41,7 @@ class BadgeItem extends Component {
   onSubmit = (event) => {
     const { authUser, BADGE_ID, badge } = this.state;
     
-    const report = this.props.firebase.doAwardBadge(authUser.uid, BADGE_ID, badge.name)
-    console.log(report)
+    this.props.firebase.doAwardBadge(authUser.uid, authUser.userName, BADGE_ID, badge.name)
     this.setState({ AwardEarned: true });
 
     event.preventDefault();
