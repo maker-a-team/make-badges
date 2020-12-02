@@ -3,23 +3,15 @@ import { HashRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import React from "react";
 import * as r from './routes';
 import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+
+import { Header, Footer, LandingPage, AccountPage, BadgesPage, NotFoundPage } from "./Components";
 
 import {
-  SignUpPage,
-  SignInPage,
-  PasswordForgetPage,
-  PasswordChangeForm,
-  // SignOutButton,
+  SignUpPage, SignInPage, PasswordForgetPage, PasswordChangeForm, // SignOutButton,
 } from "./Components/Authentication";
 
-// import LandingPage from "./Components/LandingPage";
-import AccountPage from "./Components/Account";
-import BadgesPage from "./Components/Badges";
-import NotFoundPage from "./Components/NotFound";
-
 import { withAuthentication } from "../src/Components/Session";
+
 
 function App() {
   return (

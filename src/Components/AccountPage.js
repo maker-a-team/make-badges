@@ -6,12 +6,12 @@ import {
   AuthUserContext,
   withAuthorization,
   withEmailVerification,
-} from "../Session";
+} from "./Session";
 
 // import LoginManagement from "../Authentication/LoginManagement";
 // import { PasswordForgetForm } from '../Authentication/PasswordForget';
 // import PasswordChangeForm from "../Authentication/PasswordChange";
-import SignOutButton from "../Authentication/SignOut";
+import SignOutButton from "./Authentication/SignOut";
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>

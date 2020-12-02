@@ -1,6 +1,6 @@
 // src/components/Authentication/LoginManagement
 import React, { Component } from "react";
-import { withFirebase } from "../../Firebase";
+import { withFirebase } from "../Firebase";
 
 // -----------------
 // SIGN_IN_METHODS

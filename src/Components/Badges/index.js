@@ -7,7 +7,7 @@ import './Badge.css'
 import BadgeList from "./BadgeList";
 import BadgeDetails from "./BadgeDetails";
 import CreateBadgeForm from "./CreateBadgeForm";
-import ImageUpload from "../ImageUpload";
+import ImageUpload from "../UploadPage";
 
 import { withAuthorization, withEmailVerification } from "../Session";
 

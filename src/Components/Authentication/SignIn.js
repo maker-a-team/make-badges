@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { Link, withRouter } from "react-router-dom";
 import { compose } from 'recompose';
 
-import { SignUpLink } from '../SignUp';
-import { PasswordForgetLink } from '../PasswordForget';
-import { withFirebase } from '../../Firebase';
-import { BADGES, SIGN_IN } from "../../../routes";
+import { SignUpLink } from './SignUp';
+import { PasswordForgetLink } from './PasswordForget';
+import { withFirebase } from '../Firebase';
+import { BADGES, SIGN_IN } from "../../routes";
 
 const SignInPage = () => (
   <div id="content-wrap">
     <h1>SignIn</h1>
+    <p>use your @students.makeschool.com, @makeschool.com , or @students.dominican.edu</p>
     <SignInForm />
     <SignInGoogle />
     {/* <SignInFacebook /> */}
