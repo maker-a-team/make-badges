@@ -130,7 +130,7 @@ class BadgeItem extends Component {
           </div>
         )}
 
-        {authUser.uid === badge.ownerID && (
+        {authUser && authUser.uid === badge.ownerID && (
           <div className="badge-buttons">
             {editMode ? (
               <div className="justify-me">

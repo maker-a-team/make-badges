@@ -20,9 +20,11 @@ const BadgesPage = () => (
   </Switch>
 );
 
-const condition = (authUser) => !!authUser;
+// const condition = (authUser) => !!authUser;
 
-export default compose(
-  withEmailVerification,
-  withAuthorization(condition)
-)(BadgesPage);
+// export default compose(
+//   withEmailVerification,
+//   withAuthorization(condition)
+// )(BadgesPage);
+
+export default BadgesPage;

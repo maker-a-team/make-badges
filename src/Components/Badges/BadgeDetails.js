@@ -56,7 +56,7 @@ class BadgeItem extends Component {
   };
 
   render() {
-    const { loading, badge, AwardEarned } = this.state;
+    const { loading, badge, AwardEarned, authUser } = this.state;
 
     return (
       <div id="content-wrap" className="BadgeDetailsPage">
@@ -65,11 +65,7 @@ class BadgeItem extends Component {
         {badge && (
           <div className="Badge-info">
             <h3>Badge ({this.state.BADGE_ID})</h3>
-            <img
-              className={(AwardEarned && "Earned") || "Badge-image"}
-              src={badge.image}
-              alt="badge"
-            />
+            <img className={(AwardEarned && "Earned") || "Badge-image"} src={badge.image} alt="badge" />
             <strong>Badge Name:</strong> {badge.name}
             <br />
             <strong>Badge Description:</strong> {badge.description}
@@ -81,22 +77,19 @@ class BadgeItem extends Component {
             <br />
             <br />
             Have you earned this award yet:
-            {("Yes" && AwardEarned) ||
-              ("No" && (
+            {AwardEarned ? " Yes" : " No"}
+            {authUser && (
+              <div>
                 <button onClick={this.onSubmit} type="submit">
                   Earn This Badge
                 </button>
-              ))}
-            <br />
-            <label>
-              Overide Request:
-              <input
-                name="AwardEarned"
-                type="checkbox"
-                checked={AwardEarned}
-                onChange={this.onChangeCheckbox}
-              />
-            </label>
+                <br />
+                <label>
+                  Overide Request:
+                  <input name="AwardEarned" type="checkbox" checked={AwardEarned} onChange={this.onChangeCheckbox} />
+                </label>
+              </div>
+            )}
           </div>
         )}
       </div>
