@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/make-badges/static/css/main.4ec24383.chunk.css",
-    "main.js": "/make-badges/static/js/main.ef62ced4.chunk.js",
-    "main.js.map": "/make-badges/static/js/main.ef62ced4.chunk.js.map",
+    "main.js": "/make-badges/static/js/main.8210b8b5.chunk.js",
+    "main.js.map": "/make-badges/static/js/main.8210b8b5.chunk.js.map",
     "runtime-main.js": "/make-badges/static/js/runtime-main.81fd5d43.js",
     "runtime-main.js.map": "/make-badges/static/js/runtime-main.81fd5d43.js.map",
     "static/js/2.10730c19.chunk.js": "/make-badges/static/js/2.10730c19.chunk.js",
     "static/js/2.10730c19.chunk.js.map": "/make-badges/static/js/2.10730c19.chunk.js.map",
     "index.html": "/make-badges/index.html",
-    "precache-manifest.5678147a5e414598ff3c7dec7fab5a5a.js": "/make-badges/precache-manifest.5678147a5e414598ff3c7dec7fab5a5a.js",
+    "precache-manifest.7bba780d4d3485bb804c776c1ccdf1a7.js": "/make-badges/precache-manifest.7bba780d4d3485bb804c776c1ccdf1a7.js",
     "service-worker.js": "/make-badges/service-worker.js",
     "static/css/main.4ec24383.chunk.css.map": "/make-badges/static/css/main.4ec24383.chunk.css.map",
     "static/js/2.10730c19.chunk.js.LICENSE.txt": "/make-badges/static/js/2.10730c19.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.81fd5d43.js",
     "static/js/2.10730c19.chunk.js",
     "static/css/main.4ec24383.chunk.css",
-    "static/js/main.ef62ced4.chunk.js"
+    "static/js/main.8210b8b5.chunk.js"
   ]
 }
