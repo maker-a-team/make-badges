@@ -37,34 +37,47 @@ class Firebase {
     this.twitterProvider = new app.auth.TwitterAuthProvider();
   }
 
-
   // *** Auth API ***
-  doCreateUserWithEmailAndPassword = (email, password) =>
+  doCreateUserWithEmailAndPassword = (email, password) => {
+    this.analytics.logEvent("Created A New User Using Email & Pass");
     this.auth.createUserWithEmailAndPassword(email, password);
+  }
 
-  doSignInWithEmailAndPassword = (email, password) =>
+  doSignInWithEmailAndPassword = (email, password) => {
+    this.analytics.logEvent("User Logged In Using Email & Pass");
     this.auth.signInWithEmailAndPassword(email, password);
+  }
 
-  doSignInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider);
+  doSignInWithGoogle = () => {
+    this.analytics.logEvent("User Logged In Using Google");
+    this.auth.signInWithPopup(this.googleProvider);
+  }
 
   doSignInWithFacebook = () => this.auth.signInWithPopup(this.facebookProvider);
 
   doSignInWithTwitter = () => this.auth.signInWithPopup(this.twitterProvider);
 
-  doSignOut = () => this.auth.signOut()
+  doSignOut = () => {
+    this.analytics.logEvent("User Logged Out");
+    this.auth.signOut();
+  }
 
-  doPasswordReset = (email) => this.auth.sendPasswordResetEmail(email);
+  doPasswordReset = (email) => {
+    this.analytics.logEvent("User Tried To Rest Their Password");
+    this.auth.sendPasswordResetEmail(email);
+  }
 
-  doPasswordUpdate = (password) =>
+  doPasswordUpdate = (password) => {
+    this.analytics.logEvent("User Changed Their Password");
     this.auth.currentUser.updatePassword(password);
+  }
 
-  doSendEmailVerification = () =>
-    this.auth.currentUser.sendEmailVerification({
-      url:
-        process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT ||
-        "http://localhost:3000/",
+  doSendEmailVerification = () =>{
+    this.analytics.logEvent("Email Verification Sent");
+    return this.auth.currentUser.sendEmailVerification({
+      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT || "http://localhost:3000/",
     });
-
+  }
 
   // *** Merge Auth and DB User API *** //
   onAuthUserListener = (next, fallback) =>
@@ -96,23 +109,39 @@ class Firebase {
       }
     });
 
-
   // *** User API ***
-  user = (uid) => this.db.ref(`users/${uid}`);
-  users = () => this.db.ref("users");
-
+  user = (uid) => {
+    this.analytics.logEvent("Referencing A User's Data");
+    this.db.ref(`users/${uid}`);
+  }
+  users = () => {
+    this.analytics.logEvent("Referencing List Of Users");
+    this.db.ref("users");
+  }
 
   // *** Badge API ***
-  badge = (uid) => this.db.ref(`badges/${uid}`);
-  badges = () => this.db.ref("badges");
+  badge = (uid) => {
+    this.analytics.logEvent("Referencing A Badge's Data");
+    this.db.ref(`badges/${uid}`);
+  }
+  badges = () => {
+    this.analytics.logEvent("Referencing List Of Badges");
+    this.db.ref("badges");
+  }
 
   doAwardBadge = (userID, userName, badgeID, badgeName) => {
     console.log(`User: ${userID} Submitted a Badge Request for ${badgeName} ID: ${badgeID}`);
-    
-    this.db.ref('users/' + userID + '/badges/').child(badgeName).set(badgeID);
+
+    this.db
+      .ref("users/" + userID + "/badges/")
+      .child(badgeName)
+      .set(badgeID);
     // this.badge(badgeID).child("winners").child(userName).set(userID);
     // this.db.ref('badges/' + badgeID + '/winners/').child(userName).set({userID});
-  }
+  };
+
+  // *** Analytics API ****
+  doAnalyzeNotification = () => this.analytics.logEvent("notification_received");
 }
 
 export default Firebase;
