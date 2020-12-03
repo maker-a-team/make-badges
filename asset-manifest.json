@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/make-badges/static/css/main.4ec24383.chunk.css",
-    "main.js": "/make-badges/static/js/main.0487d4c5.chunk.js",
-    "main.js.map": "/make-badges/static/js/main.0487d4c5.chunk.js.map",
+    "main.js": "/make-badges/static/js/main.ef62ced4.chunk.js",
+    "main.js.map": "/make-badges/static/js/main.ef62ced4.chunk.js.map",
     "runtime-main.js": "/make-badges/static/js/runtime-main.81fd5d43.js",
     "runtime-main.js.map": "/make-badges/static/js/runtime-main.81fd5d43.js.map",
-    "static/js/2.4e097b9e.chunk.js": "/make-badges/static/js/2.4e097b9e.chunk.js",
-    "static/js/2.4e097b9e.chunk.js.map": "/make-badges/static/js/2.4e097b9e.chunk.js.map",
+    "static/js/2.10730c19.chunk.js": "/make-badges/static/js/2.10730c19.chunk.js",
+    "static/js/2.10730c19.chunk.js.map": "/make-badges/static/js/2.10730c19.chunk.js.map",
     "index.html": "/make-badges/index.html",
-    "precache-manifest.1eba919e88c45bb109c0b1bd69710c85.js": "/make-badges/precache-manifest.1eba919e88c45bb109c0b1bd69710c85.js",
+    "precache-manifest.5678147a5e414598ff3c7dec7fab5a5a.js": "/make-badges/precache-manifest.5678147a5e414598ff3c7dec7fab5a5a.js",
     "service-worker.js": "/make-badges/service-worker.js",
     "static/css/main.4ec24383.chunk.css.map": "/make-badges/static/css/main.4ec24383.chunk.css.map",
-    "static/js/2.4e097b9e.chunk.js.LICENSE.txt": "/make-badges/static/js/2.4e097b9e.chunk.js.LICENSE.txt",
+    "static/js/2.10730c19.chunk.js.LICENSE.txt": "/make-badges/static/js/2.10730c19.chunk.js.LICENSE.txt",
     "static/media/logo-white.svg": "/make-badges/static/media/logo-white.759f6c70.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.81fd5d43.js",
-    "static/js/2.4e097b9e.chunk.js",
+    "static/js/2.10730c19.chunk.js",
     "static/css/main.4ec24383.chunk.css",
-    "static/js/main.0487d4c5.chunk.js"
+    "static/js/main.ef62ced4.chunk.js"
   ]
 }
