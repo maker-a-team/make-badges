@@ -39,17 +39,17 @@ class Firebase {
   // *** Auth API ***
   doCreateUserWithEmailAndPassword = (email, password) => {
     this.analytics.logEvent("Created A New User Using Email & Pass");
-    this.auth.createUserWithEmailAndPassword(email, password);
+    return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
   doSignInWithEmailAndPassword = (email, password) => {
     this.analytics.logEvent("User Logged In Using Email & Pass");
-    this.auth.signInWithEmailAndPassword(email, password);
+    return this.auth.signInWithEmailAndPassword(email, password);
   }
 
   doSignInWithGoogle = () => {
     this.analytics.logEvent("User Logged In Using Google");
-    this.auth.signInWithPopup(this.googleProvider);
+    return this.auth.signInWithPopup(this.googleProvider);
   }
 
   doSignInWithFacebook = () => this.auth.signInWithPopup(this.facebookProvider);
@@ -58,17 +58,17 @@ class Firebase {
 
   doSignOut = () => {
     this.analytics.logEvent("User Logged Out");
-    this.auth.signOut();
+    return this.auth.signOut();
   }
 
   doPasswordReset = (email) => {
     this.analytics.logEvent("User Tried To Rest Their Password");
-    this.auth.sendPasswordResetEmail(email);
+    return this.auth.sendPasswordResetEmail(email);
   }
 
   doPasswordUpdate = (password) => {
     this.analytics.logEvent("User Changed Their Password");
-    this.auth.currentUser.updatePassword(password);
+    return this.auth.currentUser.updatePassword(password);
   }
 
   doSendEmailVerification = () =>{
@@ -81,6 +81,7 @@ class Firebase {
   // *** Merge Auth and DB User API *** //
   onAuthUserListener = (next, fallback) =>
     this.auth.onAuthStateChanged((authUser) => {
+      // console.log(authUser)
       if (authUser) {
         this.user(authUser.uid)
           .once("value")
@@ -111,7 +112,7 @@ class Firebase {
   // *** User API ***
   user = (uid) => {
     this.analytics.logEvent("Referencing A User's Data");
-    this.db.ref(`users/${uid}`);
+    return this.db.ref(`users/${uid}`);
   }
   users = () => {
     this.analytics.logEvent("Referencing List Of Users");
@@ -121,17 +122,17 @@ class Firebase {
   // *** Badge API ***
   badge = (uid) => {
     this.analytics.logEvent("Referencing A Badge's Data");
-    this.db.ref(`badges/${uid}`);
+    return this.db.ref(`badges/${uid}`);
   }
   badges = () => {
     this.analytics.logEvent("Referencing List Of Badges");
-    this.db.ref("badges");
+    return this.db.ref("badges");
   }
 
   doAwardBadge = (userID, userName, badgeID, badgeName) => {
     console.log(`User: ${userID} Submitted a Badge Request for ${badgeName} ID: ${badgeID}`);
 
-    this.db
+    return this.db
       .ref("users/" + userID + "/badges/")
       .child(badgeName)
       .set(badgeID);
