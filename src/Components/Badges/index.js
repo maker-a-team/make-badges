@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { compose } from "recompose";
+// import { compose } from "recompose";
 import * as r from '../../routes';
 
 import './Badge.css'
@@ -9,7 +9,7 @@ import BadgeDetails from "./BadgeDetails";
 import CreateBadgeForm from "./CreateBadgeForm";
 import ImageUpload from "../UploadPage";
 
-import { withAuthorization, withEmailVerification } from "../Session";
+// import { withAuthorization, withEmailVerification } from "../Session";
 
 const BadgesPage = () => (
   <Switch>
